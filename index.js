@@ -6,28 +6,28 @@ const mysql = require('mysql');
 // parse application/json
 app.use(bodyParser.json());
  
-//create database connection
-const conn = mysql.createConnection({
-  host: 'localhost',
-  user: 'id9284416_root',
-  password: '12345',
-  database: 'id9284416_mdm'
-});
+// //create database connection
+// const conn = mysql.createConnection({
+//   host: 'https://databases-auth.000webhost.com',
+//   user: 'id9284416_root',
+//   password: '12345',
+//   database: 'id9284416_mdm'
+// });
  
-//connect to database
-conn.connect((err) =>{
-  if(err) throw err;
-  console.log('Mysql Connected...');
-});
+// //connect to database
+// conn.connect((err) =>{
+//   if(err) throw err;
+//   console.log('Mysql Connected...');
+// });
  
 //show all products
-app.get('/mdm/api/subscribers',(req, res) => {
-  let sql = "SELECT * FROM dm_messenger_subscribers";
-  let query = conn.query(sql, (err, results) => {
-    if(err) throw err;
-    res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
-  });
-});
+// app.get('/mdm/api/subscribers',(req, res) => {
+//   let sql = "SELECT * FROM dm_messenger_subscribers";
+//   let query = conn.query(sql, (err, results) => {
+//     if(err) throw err;
+//     res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
+//   });
+// });
  
 
 app.get('/mdm/api/test',(req, res) => {
@@ -45,22 +45,22 @@ app.get('/mdm/api/test',(req, res) => {
 //   });
 // });
  
-// add new product
-app.post('/mdm/api/subscribers/add',(req, res) => {
+// // add new product
+// app.post('/mdm/api/subscribers/add',(req, res) => {
 
-   console.log(req.body);
+//    console.log(req.body);
 
-  let data = {
-        fb_id: req.body.fb_id
-      };
+//   let data = {
+//         fb_id: req.body.fb_id
+//       };
 
-  let sql = "INSERT INTO dm_messenger_subscribers SET ?";
+//   let sql = "INSERT INTO dm_messenger_subscribers SET ?";
 
-  let query = conn.query(sql, data,(err, results) => {
-    if(err) throw err;
-    res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
-  });
-});
+//   let query = conn.query(sql, data,(err, results) => {
+//     if(err) throw err;
+//     res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
+//   });
+// });
  
 //update product
 // app.put('/api/products/:id',(req, res) => {
