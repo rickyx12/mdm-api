@@ -79,7 +79,9 @@ app.get('/mdm/api/test',(req, res) => {
 //   });
 // });
  
+var port = process.env.PORT || 8080;
+
 //Server listening
 app.listen(8080,() =>{
-  console.log('Server started on port 8080...');
+  console.log('Server started on port '+port);
 });
