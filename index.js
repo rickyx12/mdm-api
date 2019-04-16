@@ -9,9 +9,9 @@ app.use(bodyParser.json());
 //create database connection
 const conn = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '123',
-  database: 'cloudpanda-mdm_dev'
+  user: 'id9284416_root',
+  password: '12345',
+  database: 'id9284416_mdm'
 });
  
 //connect to database
