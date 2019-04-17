@@ -8,11 +8,10 @@ app.use(bodyParser.json());
  
 //create database connection
 const conn = mysql.createConnection({
-  host: '35.173.0.77',
-  user: 'root',
-  port:'3306',
-  password: 'Test123',
-  database: 'cloudpanda-mdm_dev'
+  host: 'us-cdbr-iron-east-02.cleardb.net',
+  user: 'b0e5fdd77839db',
+  password: 'b6067cc8',
+  database: 'heroku_ff8066ae2e0f8b6'
 });
  
 //connect to database
@@ -22,20 +21,20 @@ conn.connect((err) =>{
 });
  
 //show all products
-app.get('/mdm/api/subscribers',(req, res) => {
-  let sql = "SELECT * FROM dm_messenger_subscribers";
-  let query = conn.query(sql, (err, results) => {
-    if(err) throw err;
-    res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
-  });
-});
+// app.get('/mdm/api/subscribers',(req, res) => {
+//   let sql = "SELECT * FROM dm_messenger_subscribers";
+//   let query = conn.query(sql, (err, results) => {
+//     if(err) throw err;
+//     res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
+//   });
+// });
  
 
-app.get('/mdm/api/test',(req, res) => {
+// app.get('/mdm/api/test',(req, res) => {
 
-   res.send(JSON.stringify({"status": 200, "error": null, "response": "test"}));
+//    res.send(JSON.stringify({"status": 200, "error": null, "response": "test"}));
 
-});
+// });
 
 //show single product
 // app.get('/api/products/:id',(req, res) => {
