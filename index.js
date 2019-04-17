@@ -5,19 +5,19 @@ const app = express();
 // parse application/json
 app.use(bodyParser.json());
  
-// //create database connection
-// const conn = mysql.createConnection({
-//   host: 'https://databases-auth.000webhost.com',
-//   user: 'id9284416_root',
-//   password: '12345',
-//   database: 'id9284416_mdm'
-// });
+//create database connection
+const conn = mysql.createConnection({
+  host: 'https://premium52.web-hosting.com:2083',
+  user: 'viayaqtx_mysundo',
+  password: 'x691=uhx$cal',
+  database: 'viayaqtx_mysundo'
+});
  
-// //connect to database
-// conn.connect((err) =>{
-//   if(err) throw err;
-//   console.log('Mysql Connected...');
-// });
+//connect to database
+conn.connect((err) =>{
+  if(err) throw err;
+  console.log('Mysql Connected...');
+});
  
 //show all products
 // app.get('/mdm/api/subscribers',(req, res) => {
