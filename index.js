@@ -22,13 +22,13 @@ conn.connect((err) =>{
 });
  
 //show all products
-// app.get('/mdm/api/subscribers',(req, res) => {
-//   let sql = "SELECT * FROM dm_messenger_subscribers";
-//   let query = conn.query(sql, (err, results) => {
-//     if(err) throw err;
-//     res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
-//   });
-// });
+app.get('/mdm/api/subscribers',(req, res) => {
+  let sql = "SELECT * FROM dm_messenger_subscribers";
+  let query = conn.query(sql, (err, results) => {
+    if(err) throw err;
+    res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
+  });
+});
  
 
 app.get('/mdm/api/test',(req, res) => {
