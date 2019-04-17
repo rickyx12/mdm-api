@@ -8,8 +8,9 @@ app.use(bodyParser.json());
  
 //create database connection
 const conn = mysql.createConnection({
-  host: 'http://35.173.0.77',
+  host: '35.173.0.77',
   user: 'root',
+  port:'3306',
   password: 'Test123',
   database: 'cloudpanda-mdm_dev'
 });
